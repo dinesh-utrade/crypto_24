@@ -25,7 +25,9 @@ class _NewsHeadlinePageState extends State<NewsHeadlinePage> {
               actions: [
                 IconButton(
                   icon: Icon(Icons.notifications),
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, ADMIN_PAGE);
+                  },
                 )
               ],
             ),
@@ -68,6 +70,7 @@ class _NewsHeadlinePageState extends State<NewsHeadlinePage> {
 
 class FirstHeadlineWidget extends StatelessWidget {
   final NewsItem newsItem;
+
   FirstHeadlineWidget(this.newsItem);
 
   @override

@@ -4,6 +4,7 @@ class NewsItem {
   late int time;
   late String writer;
   late String source;
+  late String? category;
   late String? extra;
   late Map<String, dynamic>? imgUrl;
 
@@ -13,6 +14,7 @@ class NewsItem {
       required this.time,
       required this.writer,
       required this.source,
+      this.category,
       this.extra,
       this.imgUrl});
 
@@ -22,6 +24,7 @@ class NewsItem {
     time = json['time'];
     writer = json['writer'];
     source = json['source'];
+    category = json['category'];
     extra = json['extra'];
     imgUrl = json['imgUrl'];
   }
@@ -33,6 +36,7 @@ class NewsItem {
     map['time'] = time;
     map['writer'] = writer;
     map['source'] = source;
+    map['category'] = category;
     map['extra'] = extra;
     map['imgUrl'] = imgUrl;
     return map;
